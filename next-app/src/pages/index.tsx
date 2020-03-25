@@ -11,9 +11,18 @@ const Index: React.FC = () => (
             <title>換気アプリ</title>
         </Head>
 
-        <CssBaseline />
+        <body>
+        <CssBaseline/>
         <GlobalHeader/>
         <Top/>
+        </body>
+
+        <style jsx>{`
+            body {
+                background-color: rgba(255, 220, 44, .8);
+                padding: 2em 0;
+            }
+        `}</style>
     </React.Fragment>
 )
 
