@@ -31,6 +31,7 @@ const GraphTitle = styled(Typography)`
 `
 
 const GraphBox = styled(Box)`
+  background-color: #fff;
   margin-top: 4em;
   padding: 2em;
   border: 2px solid #d4d4d4;
