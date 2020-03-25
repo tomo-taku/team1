@@ -1,16 +1,20 @@
 import Head from 'next/head'
+import React from 'react'
+import CssBaseline from '@material-ui/core/CssBaseline'
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>換気アプリ</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+import Top from '../templates/Top'
+import GlobalHeader from '../organisms/GlobalHeader'
 
-    <main>
-        <h1>換気しようね！</h1>
-    </main>
-  </div>
+const Index: React.FC = () => (
+    <React.Fragment>
+        <Head>
+            <title>換気アプリ</title>
+        </Head>
+
+        <CssBaseline />
+        <GlobalHeader/>
+        <Top/>
+    </React.Fragment>
 )
 
-export default Home
+export default Index
