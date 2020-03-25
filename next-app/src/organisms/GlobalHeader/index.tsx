@@ -7,19 +7,27 @@ import styled from 'styled-components'
 const GlobalHeader: React.FC = () => {
     return (
         <React.Fragment>
-            <AppBar position='static'>
+            <HeaderContainer position='static'>
                 <Toolbar component='div'>
                     <Title variant='h6'>
                         換気を促すアプリ
                     </Title>
                 </Toolbar>
-            </AppBar>
+            </HeaderContainer>
         </React.Fragment>
     )
 }
 
 const Title = styled(Typography)`
     font-weight: bold;
+    color: #fff;
+`
+
+const HeaderContainer = styled(AppBar)`
+  background-color: rgb(85, 205, 194);
+  border-radius: 16px;
+  width: 90%;
+  margin: 0 auto;
 `
 
 export default GlobalHeader
