@@ -8,14 +8,14 @@ type Props = {
     co2Concentration: number
 }
 
-const ConditionPanel: React.FC<Props> = ({co2Concentration, dustConcentration}) => {
+const ConditionPanel: React.FC<Props> = ({dustConcentration, co2Concentration}) => {
     return (
         <PanelContainer>
             <Box>
                 <Title variant='subtitle1'>
                     現在のダスト濃度
                 </Title>
-                <Numeric variant='subtitle1' display='inline'>
+                <Numeric variant='subtitle1' display='inline' isRed={dustConcentration > 100}>
                     {dustConcentration}
                 </Numeric>
                 <Unit variant='caption' display='inline'>[μg/ m3]</Unit>
@@ -25,10 +25,10 @@ const ConditionPanel: React.FC<Props> = ({co2Concentration, dustConcentration}) 
                 <Title variant='subtitle1'>
                     現在の二酸化炭素濃度
                 </Title>
-                <Numeric variant='subtitle1' display='inline'>
+                <Numeric variant='subtitle1' display='inline' isRed={co2Concentration > 1000}>
                     {co2Concentration}
                 </Numeric>
-                <Unit variant='caption' display='inline'>[μg/ m3]</Unit>
+                <Unit variant='caption' display='inline'>[ppm]</Unit>
             </Box>
         </PanelContainer>
     )
@@ -51,7 +51,8 @@ const Title = styled(Typography)`
 const Numeric = styled(Typography)`
     font-weight: bold;
     font-size: 32px;
-    color: rgb(85, 205, 194);
+    margin-left: 1em;
+    color: ${props => props.isRed ? 'rgb(246, 105, 175)' : 'rgb(85, 205, 194)'};
 `
 
 const Unit = styled(Typography)`
