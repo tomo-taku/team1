@@ -19,7 +19,7 @@ const Index: React.FC = () => (
 
         <style jsx>{`
             body {
-                background-color: rgba(255, 220, 44, .8);
+                background-color: rgb(255, 220, 44);
                 padding: 2em 0;
             }
         `}</style>
