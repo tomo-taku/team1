@@ -46,6 +46,7 @@ const PanelContainer = styled(Box)`
 const Title = styled(Typography)`
     font-weight: bold;
     font-size: 20px;
+    color: #4d4d4d;
 `
 
 const Numeric = styled(Typography)`
@@ -58,6 +59,7 @@ const Numeric = styled(Typography)`
 const Unit = styled(Typography)`
     font-weight: 500;
     margin-left: 1em;
+    color: #4d4d4d;
 `
 
 export default ConditionPanel

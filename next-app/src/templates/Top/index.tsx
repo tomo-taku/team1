@@ -68,8 +68,10 @@ const Top: React.FC = () => {
 }
 
 const GraphTitle = styled(Typography)`
-    margin-bottom: 8px;
+    margin-bottom: 2em;
     font-weight: bold;
+    font-size: 20px;
+    color: #4d4d4d;
 `
 
 const GraphBox = styled(Box)`
